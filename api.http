@@ -1,0 +1,32 @@
+### 
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"username": "yuta",
+	"password": "1234"
+}
+
+###
+http://127.0.0.1:8000/orders/ HTTP/1.1
+Content-Type: 'application/json'
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNTQwNzM3LCJpYXQiOjE3NTM1MzcxMzcsImp0aSI6ImJiNDhmMDk1MWIxNDQxN2FhYWY4OGViYzEyZjMwMGIzIiwidXNlcl9pZCI6IjIifQ.nA5yEblOUByYAPGbxQT_7udOnYEKbr7mLU_frMhWZXY
+
+{
+    "status": "Pending",
+    "items": [
+            {
+                    "product": 2,
+                    "quantity": 2
+            },
+            {
+                    "product": 3,
+                    "quantity": 1
+            }
+	]	
+}
+###
+
+http://127.0.0.1:8000/orders/ HTTP/1.1
+Content-Type: 'application/json'
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNTQwNzM3LCJpYXQiOjE3NTM1MzcxMzcsImp0aSI6ImJiNDhmMDk1MWIxNDQxN2FhYWY4OGViYzEyZjMwMGIzIiwidXNlcl9pZCI6IjIifQ.nA5yEblOUByYAPGbxQT_7udOnYEKbr7mLU_frMhWZXY
